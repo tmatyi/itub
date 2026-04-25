@@ -31,8 +31,14 @@ class ProxyHandler(http.server.SimpleHTTPRequestHandler):
 
     def proxy_live(self):
         try:
+            from urllib.parse import urlparse, parse_qs
+            parsed_path = urlparse(self.path)
+            query = parse_qs(parsed_path.query)
+            runner_id = query.get('id', ['84095'])[0]
+            url = f"https://runtiming.hu/verseny/ub2026/ub2026-csapat13/versenyzo/{runner_id}"
+
             req = urllib.request.Request(
-                LIVE_URL,
+                url,
                 headers={
                     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                                   "AppleWebKit/537.36 (KHTML, like Gecko) "

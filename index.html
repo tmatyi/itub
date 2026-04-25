@@ -54,7 +54,7 @@
       <div class="summary-grid" id="summaryGrid">
         <div class="summary-card card-current" id="cardCurrent">
           <div class="card-icon">🏃</div>
-          <div class="card-label">2026 Jelenlegi</div>
+          <div class="card-label">2026 Aktuális</div>
           <div class="card-value" id="val2026">–</div>
           <div class="card-sub" id="sub2026">Vár az indulásra</div>
         </div>
@@ -64,18 +64,43 @@
           <div class="card-value" id="val2025">–</div>
           <div class="card-sub" id="sub2025">–</div>
         </div>
-        <div class="summary-card card-best" id="cardBest">
-          <div class="card-icon">🏆</div>
-          <div class="card-label">Legjobb év</div>
-          <div class="card-value" id="valBest">–</div>
-          <div class="card-sub" id="subBest">–</div>
+        <div class="summary-card card-best" id="card2024">
+          <div class="card-icon">⚡</div>
+          <div class="card-label">2024</div>
+          <div class="card-value" id="val2024">–</div>
+          <div class="card-sub" id="sub2024">–</div>
         </div>
-        <div class="summary-card card-progress" id="cardProgress">
-          <div class="card-icon">📍</div>
-          <div class="card-label">Haladás</div>
-          <div class="card-value" id="valProgress">–</div>
-          <div class="card-sub" id="subProgress">–</div>
+        <div class="summary-card card-progress" id="card2023">
+          <div class="card-icon">⭐</div>
+          <div class="card-label">2023</div>
+          <div class="card-value" id="val2023">–</div>
+          <div class="card-sub" id="sub2023">–</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitors Section -->
+  <section class="competitors-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Ellenfél csapatok</h2>
+      </div>
+      <div class="table-wrapper">
+        <table class="segments-table" id="competitorTable">
+          <thead>
+            <tr>
+              <th>Csapat</th>
+              <th>Legutóbbi Pontja (Ideje)</th>
+              <th>Közös Szakasz</th>
+              <th class="col-time">Közös Idejük</th>
+              <th class="col-time">Mi Időnk Eddig</th>
+              <th class="col-diff">Diff</th>
+            </tr>
+          </thead>
+          <tbody id="competitorBody">
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -85,7 +110,7 @@
     <div class="container">
       <div class="route-progress-card">
         <div class="route-header">
-          <span class="route-title">Útvonal haladás</span>
+          <span class="route-title">Útvonal haladás (<span id="valProgress">0%</span>)</span>
           <span class="route-distance">Rajt → Balatonfüred (~ 220 km)</span>
         </div>
         <div class="route-bar-wrapper">

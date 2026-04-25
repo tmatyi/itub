@@ -739,9 +739,13 @@ const LIVE_DATA_URL = '/api/live';
 // Refresh interval (ms)
 const REFRESH_INTERVAL_MS = 30000;
 
+const TEAM_ID = '84095';
+const OPPONENT_IDS = ['83680', '84268', '83903', '84093', '84094'];
+
 /* ---- STATE ---- */
 let state = {
   live2026: [],          // parsed checkpoint data from 84095
+  opponents: [],         // opponent data
   filteredMode: 'all',
   cumViewMode: 'km',
   splitChart: null,
@@ -793,14 +797,19 @@ function timeElapsed(clockStr) {
 }
 
 /* ---- PARSE live HTML ---- */
-async function fetchLiveData() {
+async function fetchRunnerData(id) {
   try {
-    const res = await fetch(LIVE_DATA_URL + '?_=' + Date.now(), { cache: 'no-store' });
+    const res = await fetch(`${LIVE_DATA_URL}?id=${id}&_=${Date.now()}`, { cache: 'no-store' });
     const html = await res.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, 'text/html');
+
+    let teamName = `Csapat ${id}`;
+    const titleMatch = doc.title.match(/Versenyző:\s*(.*?)\s*-/);
+    if (titleMatch) teamName = titleMatch[1].trim();
+
     const table = doc.querySelector('table');
-    if (!table) return [];
+    if (!table) return { id, teamName, data: [] };
 
     const rows = table.querySelectorAll('tr');
     const data = [];
@@ -828,10 +837,10 @@ async function fetchLiveData() {
         position: cells[3].textContent.trim() || null,
       });
     }
-    return data;
+    return { id, teamName, data };
   } catch (e) {
     console.warn('Live fetch error:', e);
-    return state.live2026; // keep previous
+    return { id, teamName: `Csapat ${id}`, data: [] };
   }
 }
 
@@ -1006,7 +1015,7 @@ function updateSummaryCards(segments) {
   const sub2026 = document.getElementById('sub2026');
   if (last2026) {
     el2026.textContent = fmtTime(last2026.y2026_cum);
-    sub2026.textContent = `📍 ${last2026.to}`;
+    sub2026.textContent = `${last2026.seg}. szk 📍 ${last2026.to}`;
   } else {
     el2026.textContent = '–';
     sub2026.textContent = 'Vár az indulásra';
@@ -1021,37 +1030,31 @@ function updateSummaryCards(segments) {
     const cum25 = refSeg.y2025_est ? null : refSeg.y2025_cum;
     document.getElementById('val2025').textContent = cum25 ? fmtTime(cum25) : '–';
     document.getElementById('sub2025').textContent = cum25
-      ? `@ ${loc}  •  ${fmtDiff(last2026.y2026_cum - cum25).text}`
+      ? `${refSeg.seg}. szk @ ${loc} • ${fmtDiff(last2026.y2026_cum - cum25).text}`
       : `Nincs adat @ ${loc}`;
 
-    // Best year cumulative at this same point (only real, non-estimated values)
-    const bestCandidates = [
-      { year: 2025, cum: refSeg.y2025_est ? null : refSeg.y2025_cum },
-      { year: 2024, cum: refSeg.y2024_est ? null : refSeg.y2024_cum },
-      { year: 2023, cum: refSeg.y2023_est ? null : refSeg.y2023_cum },
-    ].filter(v => v.cum != null);
-    if (bestCandidates.length) {
-      const best = bestCandidates.reduce((a, b) => a.cum < b.cum ? a : b);
-      document.getElementById('valBest').textContent = fmtTime(best.cum);
-      document.getElementById('subBest').textContent =
-        `${best.year} @ ${loc}  •  ${fmtDiff(last2026.y2026_cum - best.cum).text}`;
-    } else {
-      document.getElementById('valBest').textContent = '–';
-      document.getElementById('subBest').textContent = `Nincs adat @ ${loc}`;
-    }
+    // 2024 cumulative at this same point
+    const cum24 = refSeg.y2024_est ? null : refSeg.y2024_cum;
+    document.getElementById('val2024').textContent = cum24 ? fmtTime(cum24) : '–';
+    document.getElementById('sub2024').textContent = cum24
+      ? `${refSeg.seg}. szk @ ${loc} • ${fmtDiff(last2026.y2026_cum - cum24).text}`
+      : `Nincs adat @ ${loc}`;
+
+    // 2023 cumulative at this same point
+    const cum23 = refSeg.y2023_est ? null : refSeg.y2023_cum;
+    document.getElementById('val2023').textContent = cum23 ? fmtTime(cum23) : '–';
+    document.getElementById('sub2023').textContent = cum23
+      ? `${refSeg.seg}. szk @ ${loc} • ${fmtDiff(last2026.y2026_cum - cum23).text}`
+      : `Nincs adat @ ${loc}`;
   } else {
     // Race hasn't started yet — show nothing meaningful
     document.getElementById('val2025').textContent = '–';
     document.getElementById('sub2025').textContent = 'Vár az indulásra';
-    document.getElementById('valBest').textContent = '–';
-    document.getElementById('subBest').textContent = '–';
+    document.getElementById('val2024').textContent = '–';
+    document.getElementById('sub2024').textContent = '–';
+    document.getElementById('val2023').textContent = '–';
+    document.getElementById('sub2023').textContent = '–';
   }
-
-  // --- Card 4: progress ---
-  const completedSegs = segments.filter(s => s.y2026_cum != null && !s.y2026_est).length;
-  const pct = Math.round(completedSegs / segments.length * 100);
-  document.getElementById('valProgress').textContent = `${pct}%`;
-  document.getElementById('subProgress').textContent = `${completedSegs}/${segments.length} pont`;
 }
 
 function getTotalDist(segments) {
@@ -1076,6 +1079,11 @@ function updateRouteProgress(segments) {
 
   let progressDist = lastCompletedIdx >= 0 ? cumDists[lastCompletedIdx] : 0;
   const pct = Math.min(100, (progressDist / totalDist) * 100);
+
+  const completedSegs = segments.filter(s => s.y2026_cum != null && !s.y2026_est).length;
+  const pctSegs = Math.round(completedSegs / segments.length * 100);
+  const elProgress = document.getElementById('valProgress');
+  if (elProgress) elProgress.textContent = `${pctSegs}%`;
 
   document.getElementById('routeFill').style.width = pct + '%';
   document.getElementById('routeMarker').style.left = pct + '%';
@@ -1126,7 +1134,7 @@ function updateSegmentsTable(segments) {
       : null;
     const diffFmt = fmtDiff(diff);
 
-    const isActive = (i === lastRealIdx);
+    const isActive = (i === lastRealIdx + 1);
 
     // Pace: 2026 only
     const paceSec = seg.y2026_split != null && !seg.y2026_est ? seg.y2026_split : null;
@@ -1159,9 +1167,10 @@ function updateSegmentsTable(segments) {
   });
 
   applyFilter(state.filteredMode);
-  if (document.querySelector('.row-active-segment')) {
-    document.querySelector('.row-active-segment').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
+  // Disabled auto-scroll as requested
+  // if (document.querySelector('.row-active-segment')) {
+  //   document.querySelector('.row-active-segment').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  // }
 }
 
 function applyFilter(mode) {
@@ -1427,16 +1436,87 @@ function toggleCumView(mode) {
   updateCumChart(allSegs);
 }
 
+/* ---- Opponents ---- */
+function updateOpponentsUI(ourSegments) {
+  const tbody = document.getElementById('competitorBody');
+  if (!tbody) return;
+  tbody.innerHTML = '';
+
+  let ourLastRealIdx = -1;
+  for (let i = 0; i < ourSegments.length; i++) {
+    if (ourSegments[i].y2026_cum != null && !ourSegments[i].y2026_est) {
+      ourLastRealIdx = i;
+    }
+  }
+
+  const ops = state.opponents || [];
+  const rowsData = [];
+
+  for (const op of ops) {
+    if (!op.data || op.data.length === 0) continue;
+    const theirSegments = buildSegments(op.data);
+    let theirLastRealIdx = -1;
+    for (let i = 0; i < theirSegments.length; i++) {
+      if (theirSegments[i].y2026_cum != null && !theirSegments[i].y2026_est) {
+        theirLastRealIdx = i;
+      }
+    }
+    
+    if (theirLastRealIdx < 0 || ourLastRealIdx < 0) continue;
+
+    const cmpIdx = Math.min(ourLastRealIdx, theirLastRealIdx);
+    const ourTime = ourSegments[cmpIdx].y2026_cum;
+    const theirTime = theirSegments[cmpIdx].y2026_cum;
+    const diff = ourTime - theirTime; // if diff > 0, we are slower
+
+    rowsData.push({
+      teamName: op.teamName,
+      theirLastSeg: theirSegments[theirLastRealIdx],
+      cmpSeg: ourSegments[cmpIdx],
+      ourTime,
+      theirTime,
+      diff
+    });
+  }
+
+  // Sort by who is beating us mostly / who is furthest ahead. 
+  // Let's sort by their diff at the comparison point. 
+  // diff > 0 means they took less time, so they are faster.
+  rowsData.sort((a, b) => b.diff - a.diff);
+
+  rowsData.forEach(r => {
+    const diffFinal = fmtDiff(r.diff); 
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><strong>${r.teamName}</strong></td>
+      <td><span class="seg-name">${r.theirLastSeg.to}</span><br><span class="time-2026" style="font-size:0.85em; font-weight: 500">${fmtTime(r.theirLastSeg.y2026_cum)}</span></td>
+      <td><span class="seg-name">${r.cmpSeg.to}</span></td>
+      <td class="col-time">${fmtTime(r.theirTime)}</td>
+      <td class="col-time">${fmtTime(r.ourTime)}</td>
+      <td><span class="diff-inline ${diffFinal.cls}">${diffFinal.text}</span></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
 /* ---- Refresh ---- */
 async function refreshData() {
   const btn = document.getElementById('refreshBtn');
   btn.classList.add('spinning');
 
   try {
-    const live = await fetchLiveData();
-    state.live2026 = live;
-    const segments = buildSegments(live);   // estimation happens inside
+    const mainPromise = fetchRunnerData(TEAM_ID);
+    const opPromises = OPPONENT_IDS.map(id => fetchRunnerData(id));
+    
+    const [main, ...ops] = await Promise.all([mainPromise, ...opPromises]);
+
+    state.live2026 = main.data;
+    state.opponents = ops;
+
+    const segments = buildSegments(main.data);   // estimation happens inside
     updateUI(segments);
+    updateOpponentsUI(segments);
 
     const now = new Date();
     document.getElementById('lastRefresh').textContent =
