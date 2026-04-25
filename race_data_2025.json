@@ -1,0 +1,401 @@
+[
+  {
+    "name": "Rajt",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "10:13:40.9",
+    "position": null
+  },
+  {
+    "name": "Aszófő",
+    "cum_time": 2399.0,
+    "split_time": 2399.0,
+    "arrival_clock": "10:53:40.0",
+    "position": "801"
+  },
+  {
+    "name": "Fövenyes",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonakali",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Zánka Erzsébet-tábor",
+    "cum_time": 6605.0,
+    "split_time": null,
+    "arrival_clock": "12:03:46.7",
+    "position": "721"
+  },
+  {
+    "name": "Zánka",
+    "cum_time": 7497.0,
+    "split_time": 891.0,
+    "arrival_clock": "12:18:38.6",
+    "position": "302"
+  },
+  {
+    "name": "Balatonszepezd",
+    "cum_time": 8852.0,
+    "split_time": 1354.0,
+    "arrival_clock": "12:41:13.0",
+    "position": "838"
+  },
+  {
+    "name": "Révfülöp kelet",
+    "cum_time": 9856.0,
+    "split_time": 1004.0,
+    "arrival_clock": "12:57:57.1",
+    "position": "713"
+  },
+  {
+    "name": "Révfülöp nyugat",
+    "cum_time": 10408.0,
+    "split_time": 552.0,
+    "arrival_clock": "13:07:09.2",
+    "position": "602"
+  },
+  {
+    "name": "Ábrahámhegy",
+    "cum_time": 12034.0,
+    "split_time": 1626.0,
+    "arrival_clock": "13:34:15.4",
+    "position": "638"
+  },
+  {
+    "name": "Badacsonyörs Varga pincészet",
+    "cum_time": 12983.0,
+    "split_time": 949.0,
+    "arrival_clock": "13:50:04.7",
+    "position": "572"
+  },
+  {
+    "name": "Badacsony",
+    "cum_time": 14493.0,
+    "split_time": 1509.0,
+    "arrival_clock": "14:15:14.4",
+    "position": "480"
+  },
+  {
+    "name": "Badacsonytördemic",
+    "cum_time": 15874.0,
+    "split_time": 1380.0,
+    "arrival_clock": "14:38:15.0",
+    "position": "275"
+  },
+  {
+    "name": "Szigliget",
+    "cum_time": 16588.0,
+    "split_time": 714.0,
+    "arrival_clock": "14:50:09.8",
+    "position": "319"
+  },
+  {
+    "name": "Balatongyörök kelet",
+    "cum_time": 18583.0,
+    "split_time": 1994.0,
+    "arrival_clock": "15:23:24.1",
+    "position": "188"
+  },
+  {
+    "name": "Balatongyörök nyugat",
+    "cum_time": 19513.0,
+    "split_time": 930.0,
+    "arrival_clock": "15:38:54.3",
+    "position": "189"
+  },
+  {
+    "name": "Vonyarcvashegy kelet",
+    "cum_time": 20473.0,
+    "split_time": 960.0,
+    "arrival_clock": "15:54:54.4",
+    "position": "239"
+  },
+  {
+    "name": "Gyenesdiás",
+    "cum_time": 21332.0,
+    "split_time": 858.0,
+    "arrival_clock": "16:09:12.9",
+    "position": "237"
+  },
+  {
+    "name": "Keszthely kelet",
+    "cum_time": 21984.0,
+    "split_time": 652.0,
+    "arrival_clock": "16:20:05.6",
+    "position": "254"
+  },
+  {
+    "name": "Keszthely nyugat",
+    "cum_time": 22947.0,
+    "split_time": 962.0,
+    "arrival_clock": "16:36:08.0",
+    "position": "248"
+  },
+  {
+    "name": "Fenékpuszta",
+    "cum_time": 24441.0,
+    "split_time": 1494.0,
+    "arrival_clock": "17:01:02.4",
+    "position": "230"
+  },
+  {
+    "name": "Balatonberény nyugat",
+    "cum_time": 25776.0,
+    "split_time": 1334.0,
+    "arrival_clock": "17:23:16.9",
+    "position": "218"
+  },
+  {
+    "name": "Balatonberény focipálya",
+    "cum_time": 26717.0,
+    "split_time": 941.0,
+    "arrival_clock": "17:38:58.3",
+    "position": "223"
+  },
+  {
+    "name": "Balatonmáriafürdő nyugat",
+    "cum_time": 27976.0,
+    "split_time": 1259.0,
+    "arrival_clock": "17:59:57.6",
+    "position": "213"
+  },
+  {
+    "name": "Balatonmáriafürdő kelet",
+    "cum_time": 29669.0,
+    "split_time": 1693.0,
+    "arrival_clock": "18:28:10.7",
+    "position": "217"
+  },
+  {
+    "name": "Balatonfenyves nyugat",
+    "cum_time": 30186.0,
+    "split_time": 516.0,
+    "arrival_clock": "18:36:47.5",
+    "position": "214"
+  },
+  {
+    "name": "Balatonfenyves kelet",
+    "cum_time": 30785.0,
+    "split_time": 599.0,
+    "arrival_clock": "18:46:46.8",
+    "position": "207"
+  },
+  {
+    "name": "Alsóbélatelep",
+    "cum_time": 32325.0,
+    "split_time": 1539.0,
+    "arrival_clock": "19:12:26.2",
+    "position": "202"
+  },
+  {
+    "name": "Fonyód",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Fonyódliget",
+    "cum_time": 34421.0,
+    "split_time": null,
+    "arrival_clock": "19:47:22.0",
+    "position": "190"
+  },
+  {
+    "name": "Balatonboglár nyugat",
+    "cum_time": 35765.0,
+    "split_time": 1343.0,
+    "arrival_clock": "20:09:45.9",
+    "position": "163"
+  },
+  {
+    "name": "Balatonboglár kelet",
+    "cum_time": 35994.0,
+    "split_time": 229.0,
+    "arrival_clock": "20:13:35.6",
+    "position": "156"
+  },
+  {
+    "name": "Balatonlelle nyugat",
+    "cum_time": 36896.0,
+    "split_time": 901.0,
+    "arrival_clock": "20:28:37.5",
+    "position": "148"
+  },
+  {
+    "name": "Balatonlelle kelet",
+    "cum_time": 37514.0,
+    "split_time": 617.0,
+    "arrival_clock": "20:38:55.3",
+    "position": "147"
+  },
+  {
+    "name": "Balatonszemes",
+    "cum_time": 39155.0,
+    "split_time": 1641.0,
+    "arrival_clock": "21:06:16.5",
+    "position": "150"
+  },
+  {
+    "name": "Balatonszárszó",
+    "cum_time": 40895.0,
+    "split_time": 1739.0,
+    "arrival_clock": "21:35:16.2",
+    "position": "158"
+  },
+  {
+    "name": "Balatonföldvár nyugat",
+    "cum_time": 42089.0,
+    "split_time": 1193.0,
+    "arrival_clock": "21:55:10.1",
+    "position": "155"
+  },
+  {
+    "name": "Balatonföldvár kelet",
+    "cum_time": 42693.0,
+    "split_time": 603.0,
+    "arrival_clock": "22:05:14.0",
+    "position": "160"
+  },
+  {
+    "name": "Szántód",
+    "cum_time": 43356.0,
+    "split_time": 663.0,
+    "arrival_clock": "22:16:17.8",
+    "position": "159"
+  },
+  {
+    "name": "Zamárdi",
+    "cum_time": 44303.0,
+    "split_time": 947.0,
+    "arrival_clock": "22:32:04.8",
+    "position": "157"
+  },
+  {
+    "name": "Balatonszéplak",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Siófok nyugat",
+    "cum_time": 46734.0,
+    "split_time": null,
+    "arrival_clock": "23:12:35.7",
+    "position": "157"
+  },
+  {
+    "name": "Siófok kampusz",
+    "cum_time": 47862.0,
+    "split_time": 1127.0,
+    "arrival_clock": "23:31:23.5",
+    "position": "158"
+  },
+  {
+    "name": "Siófok kelet",
+    "cum_time": 48745.0,
+    "split_time": 883.0,
+    "arrival_clock": "23:46:06.5",
+    "position": "158"
+  },
+  {
+    "name": "Siófok-Sóstó",
+    "cum_time": 50221.0,
+    "split_time": 1476.0,
+    "arrival_clock": "00:10:42.5",
+    "position": "162"
+  },
+  {
+    "name": "Balatonvilágos nyugat",
+    "cum_time": 51410.0,
+    "split_time": 1188.0,
+    "arrival_clock": "00:30:31.0",
+    "position": "168"
+  },
+  {
+    "name": "Balatonvilágos kelet",
+    "cum_time": 52207.0,
+    "split_time": 797.0,
+    "arrival_clock": "00:43:48.6",
+    "position": "172"
+  },
+  {
+    "name": "Balatonakarattya",
+    "cum_time": 53897.0,
+    "split_time": 1689.0,
+    "arrival_clock": "01:11:58.2",
+    "position": "170"
+  },
+  {
+    "name": "Balatonkenese",
+    "cum_time": 55913.0,
+    "split_time": 2015.0,
+    "arrival_clock": "01:45:33.9",
+    "position": "179"
+  },
+  {
+    "name": "Balatonfűzfő",
+    "cum_time": 57686.0,
+    "split_time": 1773.0,
+    "arrival_clock": "02:15:07.4",
+    "position": "178"
+  },
+  {
+    "name": "Tobruk",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonalmádi kelet",
+    "cum_time": 59955.0,
+    "split_time": null,
+    "arrival_clock": "02:52:56.1",
+    "position": "179"
+  },
+  {
+    "name": "Balatonalmádi nyugat",
+    "cum_time": 60866.0,
+    "split_time": 910.0,
+    "arrival_clock": "03:08:07.0",
+    "position": "184"
+  },
+  {
+    "name": "Alsóörs",
+    "cum_time": 62836.0,
+    "split_time": 1970.0,
+    "arrival_clock": "03:40:57.3",
+    "position": "190"
+  },
+  {
+    "name": "Csopak",
+    "cum_time": 64390.0,
+    "split_time": 1554.0,
+    "arrival_clock": "04:06:51.5",
+    "position": "188"
+  },
+  {
+    "name": "Balatonfüred kelet",
+    "cum_time": 65709.0,
+    "split_time": 1318.0,
+    "arrival_clock": "04:28:50.2",
+    "position": "190"
+  },
+  {
+    "name": "Cél",
+    "cum_time": 67028.0,
+    "split_time": 1319.0,
+    "arrival_clock": "04:50:49.3",
+    "position": "200"
+  }
+]

@@ -114,6 +114,9 @@ let state = {
   cumChart: null,
   paceChart: null,
   refreshTimer: null,
+  clockInterval: null,   // setInterval for live ticking clock
+  lastCumAtFetch: null,  // 2026 cumulative seconds at last successful fetch
+  lastFetchWall: null,   // Date.now() at last successful fetch
 };
 
 /* ---- UTILITY ---- */
@@ -357,46 +360,80 @@ function updateUI(segments) {
   updateCharts(segments);
 }
 
-function updateSummaryCards(segments) {
-  // Find last completed 2026 checkpoint
-  let last2026 = null;
-  for (const seg of segments) {
-    if (seg.y2026_cum != null) last2026 = seg;
-  }
+/* ---- Live ticking clock ---- */
+function startLiveClock() {
+  stopLiveClock();
+  if (state.lastCumAtFetch == null || state.lastFetchWall == null) return;
+  const el = document.getElementById('val2026');
+  state.clockInterval = setInterval(() => {
+    const elapsed = state.lastCumAtFetch + (Date.now() - state.lastFetchWall) / 1000;
+    el.textContent = fmtTime(Math.floor(elapsed));
+  }, 1000);
+}
+function stopLiveClock() {
+  if (state.clockInterval) { clearInterval(state.clockInterval); state.clockInterval = null; }
+}
 
-  // 2026 current
+function updateSummaryCards(segments) {
+  // Find last REAL (non-estimated) 2026 checkpoint and its index
+  let last2026 = null, last2026Idx = -1;
+  segments.forEach((seg, i) => {
+    if (seg.y2026_cum != null && !seg.y2026_est) { last2026 = seg; last2026Idx = i; }
+  });
+
+  // --- Card 1: 2026 live ticking elapsed time ---
   const el2026 = document.getElementById('val2026');
   const sub2026 = document.getElementById('sub2026');
   if (last2026) {
+    // Seed clock state (refreshed on every data pull)
+    state.lastCumAtFetch = last2026.y2026_cum;
+    state.lastFetchWall  = Date.now();
     el2026.textContent = fmtTime(last2026.y2026_cum);
     sub2026.textContent = `📍 ${last2026.to}`;
+    startLiveClock();
   } else {
+    stopLiveClock();
     el2026.textContent = '–';
     sub2026.textContent = 'Vár az indulásra';
   }
 
-  // 2025 final
-  const finalSeg = segments[segments.length - 1];
-  document.getElementById('val2025').textContent = fmtTime(finalSeg.y2025_cum);
-  document.getElementById('sub2025').textContent = finalSeg.y2025_cum ? `${fmtPace(finalSeg.y2025_cum, getTotalDist(segments))}` : '–';
+  // --- Card 2 & 3: compare AT THE SAME CHECKPOINT currently reached ---
+  if (last2026Idx >= 0) {
+    const refSeg = segments[last2026Idx];
+    const loc = last2026.to;
 
-  // Best year
-  const vals = [
-    { year: 2025, cum: finalSeg.y2025_cum },
-    { year: 2024, cum: finalSeg.y2024_cum },
-    { year: 2023, cum: finalSeg.y2023_cum },
-  ].filter(v => v.cum != null);
-  if (vals.length) {
-    const best = vals.reduce((a, b) => a.cum < b.cum ? a : b);
-    document.getElementById('valBest').textContent = fmtTime(best.cum);
-    document.getElementById('subBest').textContent = `${best.year} • ${fmtPace(best.cum, getTotalDist(segments))}`;
+    // 2025 cumulative at this same point
+    const cum25 = refSeg.y2025_est ? null : refSeg.y2025_cum;
+    document.getElementById('val2025').textContent = cum25 ? fmtTime(cum25) : '–';
+    document.getElementById('sub2025').textContent = cum25
+      ? `@ ${loc}  •  ${fmtDiff(last2026.y2026_cum - cum25).text}`
+      : `Nincs adat @ ${loc}`;
+
+    // Best year cumulative at this same point (only real, non-estimated values)
+    const bestCandidates = [
+      { year: 2025, cum: refSeg.y2025_est ? null : refSeg.y2025_cum },
+      { year: 2024, cum: refSeg.y2024_est ? null : refSeg.y2024_cum },
+      { year: 2023, cum: refSeg.y2023_est ? null : refSeg.y2023_cum },
+    ].filter(v => v.cum != null);
+    if (bestCandidates.length) {
+      const best = bestCandidates.reduce((a, b) => a.cum < b.cum ? a : b);
+      document.getElementById('valBest').textContent = fmtTime(best.cum);
+      document.getElementById('subBest').textContent =
+        `${best.year} @ ${loc}  •  ${fmtDiff(last2026.y2026_cum - best.cum).text}`;
+    } else {
+      document.getElementById('valBest').textContent = '–';
+      document.getElementById('subBest').textContent = `Nincs adat @ ${loc}`;
+    }
   } else {
+    // Race hasn't started yet — show nothing meaningful
+    document.getElementById('val2025').textContent = '–';
+    document.getElementById('sub2025').textContent = 'Vár az indulásra';
     document.getElementById('valBest').textContent = '–';
     document.getElementById('subBest').textContent = '–';
   }
 
-  // Progress
-  const completedSegs = segments.filter(s => s.y2026_cum != null).length;
+  // --- Card 4: progress ---
+  const completedSegs = segments.filter(s => s.y2026_cum != null && !s.y2026_est).length;
   const pct = Math.round(completedSegs / segments.length * 100);
   document.getElementById('valProgress').textContent = `${pct}%`;
   document.getElementById('subProgress').textContent = `${completedSegs}/${segments.length} pont`;
@@ -442,12 +479,14 @@ function updateRouteProgress(segments) {
 }
 
 // Helper: render a time cell, handling both recorded and estimated values
-function timeCell(split, isEst, baseClass) {
-  if (split == null) return `<td class="col-time time-na">–</td>`;
+// extraClass: optional additional CSS class (e.g. 'col-2024' for mobile hiding)
+function timeCell(split, isEst, baseClass, extraClass = '') {
+  const extra = extraClass ? ` ${extraClass}` : '';
+  if (split == null) return `<td class="col-time time-na${extra}">–</td>`;
   const cls = isEst ? `${baseClass}-est` : baseClass;
   const prefix = isEst ? '~' : '';
   const tooltip = isEst ? ' title="Becsült érték (hiányzó ellenőrzőpont)"' : '';
-  return `<td class="col-time ${cls}"${tooltip}>${prefix}${fmtTime(split)}</td>`;
+  return `<td class="col-time ${cls}${extra}"${tooltip}>${prefix}${fmtTime(split)}</td>`;
 }
 
 function updateSegmentsTable(segments) {
@@ -465,15 +504,6 @@ function updateSegmentsTable(segments) {
     const isActive = seg.y2026_cum != null && !seg.y2026_est &&
       (i === segments.length - 1 || segments[i + 1].y2026_cum == null || segments[i + 1].y2026_est);
 
-    const tr = document.createElement('tr');
-    tr.dataset.idx = i;
-    if (isActive) tr.classList.add('row-active-segment');
-
-    // Filtering: only count real (non-estimated) 2026 data
-    if (seg.y2026_split != null && !seg.y2026_est) tr.dataset.status = 'completed';
-    if (diff != null && diff < 0) tr.dataset.dir = 'ahead';
-    else if (diff != null && diff >= 0) tr.dataset.dir = 'behind';
-
     // Best split label: show which year is the reference
     const bestYearLabel = (() => {
       if (bestSplit == null) return '';
@@ -486,7 +516,7 @@ function updateSegmentsTable(segments) {
       return map.length ? `<span class="best-year-tag">${map[0].y}</span>` : '';
     })();
 
-    // Pace: prefer real 2026, then best available
+    // Pace: prefer real 2026, then real 2025
     const paceSec = seg.y2026_split != null && !seg.y2026_est ? seg.y2026_split
       : (seg.y2025_split != null && !seg.y2025_est ? seg.y2025_split : null);
 
@@ -506,8 +536,8 @@ function updateSegmentsTable(segments) {
       <td class="col-dist">${seg.dist}</td>
       ${timeCell(seg.y2026_split, seg.y2026_est, 'time-2026')}
       ${timeCell(seg.y2025_split, seg.y2025_est, 'time-2025')}
-      ${timeCell(seg.y2024_split, seg.y2024_est, 'time-2024')}
-      ${timeCell(seg.y2023_split, seg.y2023_est, 'time-2023')}
+      ${timeCell(seg.y2024_split, seg.y2024_est, 'time-2024', 'col-2024')}
+      ${timeCell(seg.y2023_split, seg.y2023_est, 'time-2023', 'col-2023')}
       <td class="col-diff ${diffFmt.cls}">${diffFmt.text}${bestYearLabel}</td>
       <td class="col-pace">${fmtPace(paceSec, seg.dist)}</td>
     `;

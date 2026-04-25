@@ -1,0 +1,422 @@
+[
+  {
+    "name": "Rajt",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Aszófő",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Fövenyes",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonakali",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Zánka Erzsébet-tábor",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Zánka",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonszepezd",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Révfülöp kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Révfülöp nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Ábrahámhegy",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Badacsonyörs Varga pincészet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Badacsony",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Badacsonytördemic",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Szigliget",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonederics",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatongyörök kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatongyörök nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Vonyarcvashegy kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Gyenesdiás",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Keszthely kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Keszthely nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Fenékpuszta",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonberény nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonberény focipálya",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonmáriafürdő nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonmáriafürdő kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonfenyves nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonfenyves kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Alsóbélatelep",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Fonyód",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Fonyódliget",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonboglár nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonboglár kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonlelle nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonlelle kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonszemes",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonőszöd",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonszárszó",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonföldvár nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonföldvár kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Szántód",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Zamárdi",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonszéplak",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Siófok nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Siófok kampusz",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Siófok kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Siófok-Sóstó",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonvilágos nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonvilágos kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonakarattya",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonkenese",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonfűzfő",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Tobruk",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonalmádi kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonalmádi nyugat",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Alsóörs",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Csopak",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Balatonfüred kelet",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "RB Cél",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  },
+  {
+    "name": "Cél",
+    "cum_time": null,
+    "split_time": null,
+    "arrival_clock": "",
+    "position": null
+  }
+]

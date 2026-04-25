@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="hu"> <!--<![endif]-->
+<head>
+
+        <title>Versenyző: BUD-RunTimeError - NN Ultrabalaton Csapat 7-13
+ - RUNTIMING</title>
+    
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://runtiming.hu/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C500%2C600%2C700%7CPlayfair+Display%7CRoboto%7CRaleway%7CSpectral%7CRubik">
+
+    <link rel="stylesheet" href="https://runtiming.hu/dist/css/app.css">
+
+
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="https://runtiming.hu/assets/css/custom.css">
+</head>
+
+<body>
+    <main>
+
+
+    <!-- Header -->
+    <header id="js-header" class="u-header u-header--static">
+        <!-- Top Bar -->
+        <div class="u-header__section u-header__section--hidden u-header__section--dark g-bg-black g-py-7">
+            <div class="container">
+                <div
+                    class="row flex-column flex-md-row align-items-center justify-content-md-end text-uppercase g-font-weight-600 g-color-white g-font-size-13">
+                    <div class="col-auto mr-md-auto g-px-15">
+                        RUNTIMING
+                    </div>
+                    <div>
+                        <!-- START: LANGUAGE SELECTOR -->
+                        <i class="fa fa-globe" aria-hidden="true"></i>
+&nbsp;
+<a href="https://runtiming.hu/lang/hu" class="text-white" title="Magyar">HU</a>
+&nbsp;|&nbsp;
+<a href="https://runtiming.hu/lang/en" class="text-white" title="English">EN</a>
+
+&nbsp;|&nbsp;
+<a href="https://runtiming.hu/lang/cs" class="text-white" title="Čeština">CZ</a>
+
+&nbsp;|&nbsp;
+<a href="https://runtiming.hu/lang/pl" class="text-white" title="Polski">PL</a>
+                        <!-- END: LANGUAGE SELECTOR -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Top Bar -->
+
+
+        <div class="u-header__section u-header__section--light g-bg-white g-transition-0_3 g-py-10">
+            <nav class="js-mega-menu navbar navbar-expand-lg hs-menu-initialized hs-menu-horizontal">
+                <div class="container">
+                <!-- Responsive Toggle Button -->
+                <button class="navbar-toggler navbar-toggler-right btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-minus-3 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+                    <span class="hamburger hamburger--slider">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                    </span>
+                    </span>
+                </button>
+                <!-- End Responsive Toggle Button -->
+
+                <!-- Logo -->
+                <a href="https://runtiming.hu" class="navbar-brand d-flex">
+                    RUNTIMING
+                </a>
+                <!-- End Logo -->
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg" id="navBar">
+                <ul class="navbar-nav ml-auto text-uppercase g-font-weight-600 u-main-nav-v8 u-sub-menu-v1">
+
+                    <li class="nav-item g-mx-2--md g-mx-5--xl g-mb-5 g-mb-0--lg ">
+                        <a href="https://runtiming.hu" class="nav-link">Főoldal</a>
+                    </li>
+
+                                        
+                    <li class="nav-item g-mx-2--md g-mx-5--xl g-mb-5 g-mb-0--lg active">
+                        <a href="https://runtiming.hu/verseny/ub2026" class="nav-link">XX. NN ULTRABALATON</a>
+                    </li>
+
+                    <li class="nav-item hs-has-sub-menu g-mx-2--md g-mx-5--xl g-mb-5 g-mb-0--lg">
+                        <a href="#" class="nav-link" id="nav-link-1" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-1">Helyezések</a>
+                        <ul class="hs-sub-menu list-unstyled g-mt-17--lg g-mt-7--lg--scrolling" id="nav-submenu-1" aria-labelledby="nav-link-1">
+                                                        <li>
+                                <a href="https://runtiming.hu/verseny/ub2026/ub2026-egyeni/helyezesek">NN Ultrabalaton Egyéni</a>
+
+                                                            </li>
+                                                        <li>
+                                <a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat/helyezesek">NN Ultrabalaton Csapat 2-6</a>
+
+                                                            </li>
+                                                        <li>
+                                <a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/helyezesek">NN Ultrabalaton Csapat 7-13</a>
+
+                                                            </li>
+                                                    </ul>
+                    </li>
+
+                    <li class="nav-item hs-has-sub-menu g-mx-2--md g-mx-5--xl g-mb-5 g-mb-0--lg">
+                        <a href="#" class="nav-link" id="nav-link-1" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-2">Időeredmények</a>
+                        <ul class="hs-sub-menu list-unstyled g-mt-17--lg g-mt-7--lg--scrolling" id="nav-submenu-2" aria-labelledby="nav-link-2">
+                                                        <li>
+                                <a href="https://runtiming.hu/verseny/ub2026/ub2026-egyeni/idoeredmenyek">NN Ultrabalaton Egyéni</a>
+                            </li>
+                                                        <li>
+                                <a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat/idoeredmenyek">NN Ultrabalaton Csapat 2-6</a>
+                            </li>
+                                                        <li>
+                                <a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/idoeredmenyek">NN Ultrabalaton Csapat 7-13</a>
+                            </li>
+                                                    </ul>
+                    </li>
+                    
+
+
+                    
+
+                    
+
+                                        <li class="nav-item hs-has-sub-menu g-mx-2--md g-mx-5--xl g-mb-5 g-mb-0--lg ">
+                        <a href="#" class="nav-link" id="nav-link-archives" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-archives">Korábbi versenyek</a>
+                        <!-- Submenu -->
+                        <ul class="hs-sub-menu list-unstyled g-mt-17--lg g-mt-7--lg--scrolling" id="nav-submenu-archives" aria-labelledby="nav-link-archives">
+                            <li>
+                                <a href="https://runtiming.hu/archive">Minden verseny</a>
+                            </li>
+                                                        <li class="hs-has-sub-menu">
+                                <a href="#" id="nav-link-2021" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-2021">2021</a>
+                                <ul class="hs-sub-menu list-unstyled" id="nav-submenu-2021" aria-labelledby="nav-link-2021">
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/corfu2021">Corfu Mountain Trail</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/utt2021">5. UTT-130</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ultralupa">Ultra Lupa-tó</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/korinthosz21">Korinthosz</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/kisszekely-trail">Bizalmi Kör Kisszékely Trail 2021</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ub2021">XV. NN UltraBalaton</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ubtrail2021">Burger King UB Trail</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/organica2021">ORGANICA FX RUNNING ORADEA - DEBRECEN SUPERMARATHON 2021</a>
+                                    </li>
+                                                                    </ul>
+                            </li>
+                                                        <li class="hs-has-sub-menu">
+                                <a href="#" id="nav-link-2022" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-2022">2022</a>
+                                <ul class="hs-sub-menu list-unstyled" id="nav-submenu-2022" aria-labelledby="nav-link-2022">
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ub2022-teszt">UB2022_teszt</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/diageo">Diageo toronyfutás</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ub2022">XVI. NN ULTRABALATON</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/corfu2022">Corfu Mountain Trail 2022</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/futabogar-2022">Fut a Bogár</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/uth20222">Salomon Ultra-Trail Hungary</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/harica2022">Harica Trail</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/utt2022">6. UTT-130</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ultralupa2022">Ultra Lupa-tó 2022</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/korinthosz22">Korinthosz 2022</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/kisszekely-kortrail-2022">Kisszékely Kör-Trail 2022</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/frcs22">Fighters’ Run Csopak</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ubt2022">Burger King UB Trail 2022</a>
+                                    </li>
+                                                                    </ul>
+                            </li>
+                                                        <li class="hs-has-sub-menu">
+                                <a href="#" id="nav-link-2023" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-2023">2023</a>
+                                <ul class="hs-sub-menu list-unstyled" id="nav-submenu-2023" aria-labelledby="nav-link-2023">
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/frber">Fighters’ Run Bér, Virágospuszta</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/diageo2023">Diageo toronyfutás 2023</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ub2023">XVII. NN ULTRABALATON</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/uth2023">Salomon Ultra-Trail Hungary 2023</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/frorfu-2023">FIGHTERS’ RUN ORFŰ</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/utt2023">7. UTT-130</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ult2023">Ultra Lupa-tó 2023</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/korinthosz23">Korinthosz 2023</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/frszentendre">Fighters’ Run Szentendre</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ubt2023">Burger King UB Trail 2023</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/frepleny-2023">Fighters&#039; Run Eplény</a>
+                                    </li>
+                                                                    </ul>
+                            </li>
+                                                        <li class="hs-has-sub-menu">
+                                <a href="#" id="nav-link-2024" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-2024">2024</a>
+                                <ul class="hs-sub-menu list-unstyled" id="nav-submenu-2024" aria-labelledby="nav-link-2024">
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/diageo2024">Diageo toronyfutás 2024</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/frlupa24">FIGHTERS’ RUN LUPA-TÓ</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/hdrpl24">Hard Dog Race Base Lengyelország</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ub2024">XVIII. NN ULTRABALATON</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/uth2024">Salomon Ultra-Trail Hungary 2024</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/hdrcz24">Hard Dog Race Base Csehország</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/cgd2024">Mezei Akadályfutó Verseny</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/erste2024">Erste Toronyfutás 2024</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/utt2024">BURGER KING®️ ULTRA TISZA-TÓ</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/lastdance">Korinthosz 2024</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/hdrhu24">Hard Dog Race Base Magyarország</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/frcsopak24">FIGHTERS’ RUN CSOPAK 2024</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ubt2024">BURGER KING®️ ULTRABALATON TRAIL</a>
+                                    </li>
+                                                                    </ul>
+                            </li>
+                                                        <li class="hs-has-sub-menu">
+                                <a href="#" id="nav-link-2025" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-2025">2025</a>
+                                <ul class="hs-sub-menu list-unstyled" id="nav-submenu-2025" aria-labelledby="nav-link-2025">
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/diageo2025">Diageo toronyfutás 2025</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/frvisegrad25">FIGHTERS&#039; RUN VISEGRÁD 2025</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ub2025">XIX. NN ULTRABALATON</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/hdrcz25">Hard Dog Race Base Csehország 2025</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/cgd2025">Mezei Akadályfutó Verseny 2025</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/erste2025">Erste Toronyfutás 2025</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/uth2025">Salomon Ultra-Trail Hungary 2025</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/utt2025">Bosch Ultra Tisza-tó 130</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/hdrpl25">Hard Dog Race Wild Lengyelország 2025</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/frpcsev25">FIGHTERS&#039; RUN PILISCSÉV 2025</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/hdrhu25">Hard Dog Race Base Magyarország 2025</a>
+                                    </li>
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/ubt2025">ULTRABALATON TRAIL 2025</a>
+                                    </li>
+                                                                    </ul>
+                            </li>
+                                                        <li class="hs-has-sub-menu">
+                                <a href="#" id="nav-link-2026" aria-haspopup="true" aria-expanded="false" aria-controls="nav-submenu-2026">2026</a>
+                                <ul class="hs-sub-menu list-unstyled" id="nav-submenu-2026" aria-labelledby="nav-link-2026">
+                                                                        <li class="dropdown-item">
+                                        <a href="https://runtiming.hu/verseny/frvp26">FIGHTERS&#039; RUN VESZPRÉM 2026</a>
+                                    </li>
+                                                                    </ul>
+                            </li>
+                                                    </ul>
+                        <!-- End Submenu -->
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- End Navigation -->
+
+            </div>
+        </nav>
+    </div>
+</header>
+<!-- End Header -->
+
+
+
+
+<section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall" data-options='{direction: "fromtop", animation_duration: 25, direction: "reverse"}'>
+    <div class="divimage dzsparallaxer--target w-100 g-bg-cover g-bg-size-cover g-bg-pos-top-center g-bg-primary-gradient-opacity-v1--after"
+        style="height: 140%; background-image: url(https://runtiming.hu/images/bg-home.jpg);">
+    </div>
+
+    <div class="container g-color-white text-center g-pos-rel g-z-index-1 g-pt-100 g-pb-150">
+        <h3 class="h2 g-font-weight-300 mb-0">BUD-RunTimeError</h3>
+        <h2 class="g-font-weight-700 g-font-size-65 text-uppercase">NN Ultrabalaton Csapat 7-13</h2>
+    </div>
+</section>
+
+<section class="g-bg-gray-light-v5">
+
+    <div class="container g-pt-50">
+        <div class="float-right">
+            <a class="btn btn-md u-btn-primary g-mr-5 g-mt-10 g-mb-15" href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/helyezesek">
+                <i class="fa fa-list-ol g-font-size-default g-mr-10"></i>Helyezések
+            </a>
+            <a class="btn btn-md u-btn-primary g-mr-5 g-mt-10 g-mb-15" href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/idoeredmenyek">
+                <i class="fa fa-clock-o g-font-size-default g-mr-10"></i>Időeredmények
+            </a>
+
+            
+        </div>
+        <h1><a href="https://runtiming.hu/verseny/ub2026">NN Ultrabalaton Csapat 7-13</a><br>BUD-RunTimeError</h1>
+                <br><br>
+    </div>
+
+    <div class="g-pb-50">
+        <div class="g-px-20">
+            <div class="table-container">
+
+                <table class="table footable table-stripped" data-show-toggle="true" data-paging="true" data-sorting="true" data-filtering="true" data-paging-size="25" data-filter-focus="true" data-filter-dropdown-title="Keresési mezők:" data-filter-placeholder="Keresés a táblázatban" data-paging-count-format="{CP} / {TP}" data-filter-position="left" data-filter="#filter" data-empty="Nincs találat" data-filter-connectors="false">
+                    <thead>
+                        <tr>
+                            <th width="20px;"></th>
+                            <th width="200px;">Ellenőrzőpont</th>
+
+                            <th>Verseny idő</th>
+                            <th data-type="number">Helyezés</th>
+                            <th data-type="number">Szakasz helyezés</th>
+
+                            <th>Szakasz idő</th>
+                            <th>Érkezés</th>
+                            <th>Várható érkezés</th>
+                            <th>Jóváírás</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/2982"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000001">Rajt</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3027"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000002">Aszófő</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3028"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000003">Fövenyes</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3029"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000004">Balatonakali</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3030"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000005">Zánka Erzsébet-tábor</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3031"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000006">Zánka</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3032"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000007">Balatonszepezd</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3033"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000008">Révfülöp kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3034"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000009">Révfülöp nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3035"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000010">Ábrahámhegy</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3036"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000011">Badacsonyörs Varga pincészet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3037"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000012">Badacsony</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3038"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000013">Badacsonytördemic</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3039"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000014">Szigliget</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3040"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000015">Balatonederics</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3041"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000016">Balatongyörök kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3042"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000017">Balatongyörök nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3043"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000018">Vonyarcvashegy kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3044"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000019">Gyenesdiás</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3045"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000020">Keszthely kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3046"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000021">Keszthely nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3047"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000022">Fenékpuszta</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3048"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000023">Balatonberény nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3049"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000024">Balatonberény focipálya</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3050"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000025">Balatonmáriafürdő nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3051"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000026">Balatonmáriafürdő kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3052"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000027">Balatonfenyves nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3053"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000028">Balatonfenyves kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3054"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000029">Alsóbélatelep</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3055"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000030">Fonyód</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3056"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000031">Fonyódliget</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3057"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000032">Balatonboglár nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3058"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000033">Balatonboglár kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3059"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000034">Balatonlelle nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3060"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000035">Balatonlelle kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3061"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000036">Balatonszemes</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3062"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000037">Balatonőszöd</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3063"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000038">Balatonszárszó</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3064"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000039">Balatonföldvár nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3065"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000040">Balatonföldvár kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3066"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000041">Szántód</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3067"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000042">Zamárdi</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3068"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000043">Balatonszéplak</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3069"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000044">Siófok nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3070"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000045">Siófok kampusz</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3071"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000046">Siófok kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3072"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000047">Siófok-Sóstó</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3073"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000048">Balatonvilágos nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3074"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000049">Balatonvilágos kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3075"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000050">Balatonakarattya</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3076"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000051">Balatonkenese</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3077"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000052">Balatonfűzfő</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3078"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000053">Tobruk</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3079"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000054">Balatonalmádi kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3080"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000055">Balatonalmádi nyugat</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3081"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000056">Alsóörs</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3082"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000057">Csopak</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3083"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000058">Balatonfüred kelet</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3084"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000059">RB Cél</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                                <tr class="gradeA">
+                            <td style="text-align: center;"><a href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/2983"><i class="fa fa-map-marker" aria-hidden="true"></i></a></td>
+                            <td data-sort-value="00000060">Cél</td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                                            </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="container g-py-50">
+    <h4 class="h5" style="font-weight: 600;">Ellenőrzőpontok:</h4>
+
+    <ul class="u-list-inline">
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/2982">Rajt</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3027">Aszófő</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3028">Fövenyes</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3029">Balatonakali</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3030">Zánka Erzsébet-tábor</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3031">Zánka</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3032">Balatonszepezd</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3033">Révfülöp kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3034">Révfülöp nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3035">Ábrahámhegy</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3036">Badacsonyörs Varga pincészet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3037">Badacsony</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3038">Badacsonytördemic</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3039">Szigliget</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3040">Balatonederics</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3041">Balatongyörök kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3042">Balatongyörök nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3043">Vonyarcvashegy kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3044">Gyenesdiás</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3045">Keszthely kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3046">Keszthely nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3047">Fenékpuszta</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3048">Balatonberény nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3049">Balatonberény focipálya</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3050">Balatonmáriafürdő nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3051">Balatonmáriafürdő kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3052">Balatonfenyves nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3053">Balatonfenyves kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3054">Alsóbélatelep</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3055">Fonyód</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3056">Fonyódliget</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3057">Balatonboglár nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3058">Balatonboglár kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3059">Balatonlelle nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3060">Balatonlelle kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3061">Balatonszemes</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3062">Balatonőszöd</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3063">Balatonszárszó</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3064">Balatonföldvár nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3065">Balatonföldvár kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3066">Szántód</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3067">Zamárdi</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3068">Balatonszéplak</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3069">Siófok nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3070">Siófok kampusz</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3071">Siófok kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3072">Siófok-Sóstó</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3073">Balatonvilágos nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3074">Balatonvilágos kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3075">Balatonakarattya</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3076">Balatonkenese</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3077">Balatonfűzfő</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3078">Tobruk</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3079">Balatonalmádi kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3080">Balatonalmádi nyugat</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3081">Alsóörs</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3082">Csopak</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3083">Balatonfüred kelet</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/3084">RB Cél</a>
+        </li>
+                <li class="list-inline-item g-mb-10">
+            <a class="u-tags-v1 g-color-black g-brd-around g-brd-black g-bg-black-opacity-0_1 g-bg-black--hover g-color-white--hover g-py-4 g-px-10"
+                href="https://runtiming.hu/verseny/ub2026/ub2026-csapat13/pont-eredmenyek/2983">Cél</a>
+        </li>
+            </ul>
+</div>
+
+
+<!-- Copyright Footer -->
+<footer class="g-bg-gray-dark-v1 g-color-white-opacity-0_8 g-py-20">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left g-mb-10 g-mb-0--md">
+                <div class="d-lg-flex">
+                    <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">
+                        2026 &copy; Balatonman Triatlon Kft. | Minden jog fenntartva.
+                        <span  style="color:#111;">0.083</span>
+                    </small>
+                </div>
+            </div>
+            <div class="col-md-6 text-right g-mb-10 g-mb-0--md">
+                <small class="d-block g-font-size-default g-mr-10 g-mb-10 g-mb-0--md">
+                    <a href="https://runtiming.hu/runtiming-adatkezelesi-tajekoztato.pdf" target="_blank">Adatkezelési tájékoztató</a>
+                </small>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- End Copyright Footer -->
+<a class="js-go-to u-go-to-v1" href="#" data-type="fixed" data-position='{"bottom": 15, "right": 15}' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
+    <i class="hs-icon hs-icon-arrow-top"></i>
+</a>
+
+
+<script src="https://runtiming.hu/dist/js/app.js"></script>
+
+
+    <!-- JS Plugins Init. -->
+    <script type="text/javascript">
+    // initialization of slider revolution
+
+        $(document).on('ready', function () {
+        // initialization of carousel
+        $.HSCore.components.HSCarousel.init('.js-carousel');
+
+        // initialization of tabs
+        $.HSCore.components.HSTabs.init('[role="tablist"]');
+
+        // initialization of popups
+        $.HSCore.components.HSPopup.init('.js-fancybox');
+
+        // initialization of go to
+        $.HSCore.components.HSGoTo.init('.js-go-to');
+        });
+
+        $(window).on('load', function () {
+        // initialization of header
+        $.HSCore.components.HSHeader.init($('#js-header'));
+        $.HSCore.helpers.HSHamburgers.init('.hamburger');
+
+        // initialization of HSMegaMenu component
+        $('.js-mega-menu').HSMegaMenu({
+            event: 'hover',
+            pageContainer: $('.container'),
+            breakpoint: 991
+        });
+
+        // initialization of masonry
+        $('.masonry-grid').imagesLoaded().then(function () {
+            $('.masonry-grid').masonry({
+            columnWidth: '.masonry-grid-sizer',
+            itemSelector: '.masonry-grid-item',
+            percentPosition: true
+            });
+        });
+        });
+
+        $(window).on('resize', function () {
+        setTimeout(function () {
+            $.HSCore.components.HSTabs.init('[role="tablist"]');
+        }, 200);
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.footable').footable();
+        });
+    </script>
+
+
+    
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+
+    });
+</script>
+
+
+</body>
+
+</html>
