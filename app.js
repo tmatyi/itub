@@ -1453,7 +1453,10 @@ function updateOpponentsUI(ourSegments) {
   const rowsData = [];
 
   for (const op of ops) {
-    if (!op.data || op.data.length === 0) continue;
+    if (!op.data || op.data.length === 0) {
+      rowsData.push({ teamName: op.teamName, theirLastIdx: -1, diff: null, cmpSeg: null, theirLastSeg: null, ourTime: null, theirTime: null });
+      continue;
+    }
     const theirSegments = buildSegments(op.data);
     let theirLastRealIdx = -1;
     for (let i = 0; i < theirSegments.length; i++) {
@@ -1462,39 +1465,65 @@ function updateOpponentsUI(ourSegments) {
       }
     }
     
-    if (theirLastRealIdx < 0 || ourLastRealIdx < 0) continue;
+    let ourTime = null;
+    let theirTime = null;
+    let diff = null;
+    let cmpSeg = null;
 
-    const cmpIdx = Math.min(ourLastRealIdx, theirLastRealIdx);
-    const ourTime = ourSegments[cmpIdx].y2026_cum;
-    const theirTime = theirSegments[cmpIdx].y2026_cum;
-    const diff = ourTime - theirTime; // if diff > 0, we are slower
+    if (theirLastRealIdx >= 0 && ourLastRealIdx >= 0) {
+      const cmpIdx = Math.min(ourLastRealIdx, theirLastRealIdx);
+      ourTime = ourSegments[cmpIdx] ? ourSegments[cmpIdx].y2026_cum : null;
+      theirTime = theirSegments[cmpIdx] ? theirSegments[cmpIdx].y2026_cum : null;
+      if (ourTime != null && theirTime != null) {
+        diff = ourTime - theirTime; // if diff > 0, we are slower
+        cmpSeg = ourSegments[cmpIdx];
+      }
+    }
 
     rowsData.push({
       teamName: op.teamName,
-      theirLastSeg: theirSegments[theirLastRealIdx],
-      cmpSeg: ourSegments[cmpIdx],
+      theirLastIdx: theirLastRealIdx,
+      theirLastSeg: theirLastRealIdx >= 0 ? theirSegments[theirLastRealIdx] : null,
+      cmpSeg,
       ourTime,
       theirTime,
       diff
     });
   }
 
-  // Sort by who is beating us mostly / who is furthest ahead. 
-  // Let's sort by their diff at the comparison point. 
-  // diff > 0 means they took less time, so they are faster.
-  rowsData.sort((a, b) => b.diff - a.diff);
+  // Sort: valid diffs explicitly, missing diffs to the bottom
+  rowsData.sort((a, b) => {
+    if (a.diff != null && b.diff != null) return b.diff - a.diff;
+    if (a.diff != null) return -1;
+    if (b.diff != null) return 1;
+    return 0;
+  });
 
   rowsData.forEach(r => {
-    const diffFinal = fmtDiff(r.diff); 
+    let diffStr = '-', theirLocStr = '-', cmpLoc = '-', ourTStr = '-', theirTStr = '-';
+
+    if (r.diff != null) {
+      const diffFinal = fmtDiff(r.diff); 
+      diffStr = `<span class="diff-inline ${diffFinal.cls}">${diffFinal.text}</span>`;
+      cmpLoc = `<span class="seg-name">${r.cmpSeg.to}</span>`;
+      ourTStr = fmtTime(r.ourTime);
+      theirTStr = fmtTime(r.theirTime);
+      theirLocStr = `<span class="seg-name">${r.theirLastSeg.to}</span><br><span class="time-2026" style="font-size:0.85em; font-weight: 500">${fmtTime(r.theirLastSeg.y2026_cum)}</span>`;
+    } else if (r.theirLastIdx >= 0 && r.theirLastSeg) {
+      theirLocStr = `<span class="seg-name">${r.theirLastSeg.to}</span><br><span class="time-2026" style="font-size:0.85em; font-weight: 500">${fmtTime(r.theirLastSeg.y2026_cum)}</span>`;
+      cmpLoc = 'Nincs közös adat';
+    } else {
+      theirLocStr = '<span style="color:var(--text-muted)">Vár az indulásra</span>';
+    }
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><strong>${r.teamName}</strong></td>
-      <td><span class="seg-name">${r.theirLastSeg.to}</span><br><span class="time-2026" style="font-size:0.85em; font-weight: 500">${fmtTime(r.theirLastSeg.y2026_cum)}</span></td>
-      <td><span class="seg-name">${r.cmpSeg.to}</span></td>
-      <td class="col-time">${fmtTime(r.theirTime)}</td>
-      <td class="col-time">${fmtTime(r.ourTime)}</td>
-      <td><span class="diff-inline ${diffFinal.cls}">${diffFinal.text}</span></td>
+      <td>${theirLocStr}</td>
+      <td>${cmpLoc}</td>
+      <td class="col-time">${theirTStr}</td>
+      <td class="col-time">${ourTStr}</td>
+      <td>${diffStr}</td>
     `;
     tbody.appendChild(tr);
   });
