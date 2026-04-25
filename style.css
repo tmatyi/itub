@@ -575,6 +575,7 @@ body {
 .diff-ahead  { color: var(--color-ahead); }
 .diff-behind { color: var(--color-behind); }
 .diff-na     { color: var(--text-muted); }
+.diff-inline { font-size: 0.8em; font-weight: 600; margin-top: 2px; display: inline-block; }
 
 .row-hidden { display: none; }
 .row-active-segment { background: rgba(0,212,255,0.05) !important; }
@@ -651,8 +652,8 @@ body {
   .segments-table { font-size: 12px; }
   .segments-table thead th,
   .segments-table td { padding: 9px 9px; }
-  /* Hide 2024, 2023, km, pace columns on mobile — show #, name, 2026, 2025, diff */
-  .col-2024, .col-2023, .col-dist, .col-pace { display: none; }
+  /* Hide 2023 on mobile to save space, relies on horizontal scroll for the rest */
+  .col-2023 { display: none; }
   .seg-name { max-width: 130px; }
 
   /* Filters */

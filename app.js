@@ -994,20 +994,6 @@ function updateUI(segments) {
   updateCharts(segments);
 }
 
-/* ---- Live ticking clock ---- */
-function startLiveClock() {
-  stopLiveClock();
-  if (state.lastCumAtFetch == null || state.lastFetchWall == null) return;
-  const el = document.getElementById('val2026');
-  state.clockInterval = setInterval(() => {
-    const elapsed = state.lastCumAtFetch + (Date.now() - state.lastFetchWall) / 1000;
-    el.textContent = fmtTime(Math.floor(elapsed));
-  }, 1000);
-}
-function stopLiveClock() {
-  if (state.clockInterval) { clearInterval(state.clockInterval); state.clockInterval = null; }
-}
-
 function updateSummaryCards(segments) {
   // Find last REAL (non-estimated) 2026 checkpoint and its index
   let last2026 = null, last2026Idx = -1;
@@ -1015,18 +1001,13 @@ function updateSummaryCards(segments) {
     if (seg.y2026_cum != null && !seg.y2026_est) { last2026 = seg; last2026Idx = i; }
   });
 
-  // --- Card 1: 2026 live ticking elapsed time ---
+  // --- Card 1: 2026 latest elapsed time ---
   const el2026 = document.getElementById('val2026');
   const sub2026 = document.getElementById('sub2026');
   if (last2026) {
-    // Seed clock state (refreshed on every data pull)
-    state.lastCumAtFetch = last2026.y2026_cum;
-    state.lastFetchWall  = Date.now();
     el2026.textContent = fmtTime(last2026.y2026_cum);
     sub2026.textContent = `📍 ${last2026.to}`;
-    startLiveClock();
   } else {
-    stopLiveClock();
     el2026.textContent = '–';
     sub2026.textContent = 'Vár az indulásra';
   }
@@ -1127,32 +1108,34 @@ function updateSegmentsTable(segments) {
   const tbody = document.getElementById('segmentsBody');
   tbody.innerHTML = '';
 
+  let lastRealIdx = -1;
+  for (let i = 0; i < segments.length; i++) {
+    if (segments[i].y2026_cum != null && !segments[i].y2026_est) {
+      lastRealIdx = i;
+    }
+  }
+
   segments.forEach((seg, i) => {
-    const bestSplit = getBestSplit(seg);  // only uses non-estimated splits
-    // For diff: only compare if 2026 is real (non-estimated)
-    const diff = seg.y2026_split != null && !seg.y2026_est && bestSplit != null
-      ? seg.y2026_split - bestSplit
+    // For diff: compare 2026 to 2025 ONLY, or 2023 if 2025 is missing
+    let prevSplit = null;
+    if (seg.y2025_split != null && !seg.y2025_est) prevSplit = seg.y2025_split;
+    else if (seg.y2023_split != null && !seg.y2023_est) prevSplit = seg.y2023_split;
+
+    const diff = seg.y2026_split != null && !seg.y2026_est && prevSplit != null
+      ? seg.y2026_split - prevSplit
       : null;
     const diffFmt = fmtDiff(diff);
 
-    const isActive = seg.y2026_cum != null && !seg.y2026_est &&
-      (i === segments.length - 1 || segments[i + 1].y2026_cum == null || segments[i + 1].y2026_est);
+    const isActive = (i === lastRealIdx);
 
-    // Best split label: show which year is the reference
-    const bestYearLabel = (() => {
-      if (bestSplit == null) return '';
-      const map = [
-        { y: 2026, s: seg.y2026_split, est: seg.y2026_est },
-        { y: 2025, s: seg.y2025_split, est: seg.y2025_est },
-        { y: 2024, s: seg.y2024_split, est: seg.y2024_est },
-        { y: 2023, s: seg.y2023_split, est: seg.y2023_est },
-      ].filter(x => x.s === bestSplit && !x.est);
-      return map.length ? `<span class="best-year-tag">${map[0].y}</span>` : '';
-    })();
+    // Pace: 2026 only
+    const paceSec = seg.y2026_split != null && !seg.y2026_est ? seg.y2026_split : null;
 
-    // Pace: prefer real 2026, then real 2025
-    const paceSec = seg.y2026_split != null && !seg.y2026_est ? seg.y2026_split
-      : (seg.y2025_split != null && !seg.y2025_est ? seg.y2025_split : null);
+    let timeContent2026 = timeCell(seg.y2026_split, seg.y2026_est, 'time-2026');
+    // Inject the difference into the 2026 cell
+    if (diff != null) {
+      timeContent2026 = timeContent2026.replace('</td>', `<br><span class="diff-inline ${diffFmt.cls}">${diffFmt.text}</span></td>`);
+    }
 
     const row = document.createElement('tr');
     row.dataset.idx = i;
@@ -1165,15 +1148,12 @@ function updateSegmentsTable(segments) {
       <td class="seg-num">${seg.seg}</td>
       <td>
         <span class="seg-name">${seg.to}${isActive ? '<span class="active-badge">ÉLŐBEN</span>' : ''}</span>
-        <span class="seg-from">${seg.from}</span>
+        <span class="seg-from">${seg.from} (${seg.dist} km)</span>
       </td>
-      <td class="col-dist">${seg.dist}</td>
-      ${timeCell(seg.y2026_split, seg.y2026_est, 'time-2026')}
-      ${timeCell(seg.y2025_split, seg.y2025_est, 'time-2025')}
-      ${timeCell(seg.y2024_split, seg.y2024_est, 'time-2024', 'col-2024')}
-      ${timeCell(seg.y2023_split, seg.y2023_est, 'time-2023', 'col-2023')}
-      <td class="col-diff ${diffFmt.cls}">${diffFmt.text}${bestYearLabel}</td>
+      ${timeContent2026}
       <td class="col-pace">${fmtPace(paceSec, seg.dist)}</td>
+      ${timeCell(seg.y2025_split, seg.y2025_est, 'time-2025')}
+      ${timeCell(seg.y2023_split, seg.y2023_est, 'time-2023', 'col-2023')}
     `;
     tbody.appendChild(row);
   });
